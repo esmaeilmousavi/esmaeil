@@ -25,16 +25,15 @@ for (let i = 0; i < links.length; i++) {
     const hasClasses = (classList === undefined || classList.trim() === '') ? false : true;
     //const isHiddenAnchor = (link.href === undefined || link.href.trim() === '') ? true : false;
 
-    if (!link.find('img').length && !link.find('div').length && !link.find('input').length && !link.find('svg').length && !hasClasses ) {
+    if (!link.find('img').length && !link.find('div').length && !link.find('input').length && !link.find('svg').length && !hasClasses) {
       link.toggleClass('fancy-link');
     }
-      
+
     var ahref = link.attr('href');
-      
-      // Check if the href attribute is missing or empty    
-    if (!ahref || ahref.trim() === '')
-    {
-        link.removeClass("fancy-link");
+
+    // Check if the href attribute is missing or empty    
+    if (!ahref || ahref.trim() === '') {
+      link.removeClass("fancy-link");
     }
   }
 }
@@ -44,6 +43,6 @@ $('a[href^="mailto:"]').click(function () {
   $(this).addClass('visited');
 });
 
-$(document).ready(function(e) {
-    $("#skipToContent").removeClass('fancy-link');
+$(document).ready(function (e) {
+  $("#skipToContent").removeClass('fancy-link');
 });
